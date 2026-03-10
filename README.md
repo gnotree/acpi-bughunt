@@ -1,5 +1,3 @@
-<img width="1365" height="2048" alt="image" src="https://github.com/user-attachments/assets/0dc3d7f6-2a64-40b4-b367-4adf61530643" />
-
 =======
 # ACPI Namespace Collision Research
 
@@ -23,3 +21,4 @@ Contents:
 
 Researcher: Grant Scott Turner
 >>>>>>> 1ef496e (Clean ignore rules and update ACPI disclosure artifacts)
+<img width="1365" height="2048" alt="image" src="https://github.com/user-attachments/assets/0dc3d7f6-2a64-40b4-b367-4adf61530643" />
