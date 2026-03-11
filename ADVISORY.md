@@ -12,10 +12,11 @@ ACPI tables for a Lenovo platform identifying as `LENOVO TC-O5T` define duplicat
 - Boot log noise and potential device-initialization quirks; security impact currently indirect.
 
 ## Affected scope
-- Observed on firmware reporting OEM string `LENOVO TC-O5T` and compiler ID `INTL 20200717`.
+- Observed on firmware reporting OEM string `LENOVO TC-O5T` and compiler ID `INTL 20200717`; DMI tag partially masked as `R3J4G*** / 3769` for privacy.
 - Any firmware branch shipping the same DSDT/SSDT set may be affected.
 
 ## Evidence (summarized)
+- XSDT listed the same SSDT twice (e.g., `0x75835000` and `0x75831000`, size `0x0039DA`), leading to double loading of identical AML.
 - Disassembly showed serialized helper methods `GPLD` and `GUPC` at root scope, referenced across RHUB devices `HS01`–`HS14` and `SS01`–`SS10`.
 - Boot logs recorded `AE_ALREADY_EXISTS` when creating `_UPC/_PLD` under those ports and when creating `USRG` inside the PEGP `_DSM`, causing that method to abort.
 

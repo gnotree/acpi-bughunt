@@ -8,7 +8,7 @@ This repository provides a privacy-safe summary of ACPI namespace collisions obs
 - `GHSA-DRAFT.md` – sanitized GitHub Security Advisory draft.
 - `TIMELINE.md` – disclosure and analysis milestones.
 - `LIMITATIONS.md` – scope boundaries and caveats.
-- `REPORT.md` – structured technical report in third-person narrative.
+- `REPORT.md` – structured technical report in third-person narrative, now with a redacted vendor troubleshooting snapshot.
 
 ## Key finding
 Firmware-level duplication of ACPI namespace objects (e.g., `\GPLD`, `\GUPC`, USB RHUB `_UPC/_PLD`, and a GPU `_DSM` field) triggers `AE_ALREADY_EXISTS` errors during OS boot. The evidence points to a correctness and reliability defect; no exploit primitive has been demonstrated.

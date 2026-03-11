@@ -11,3 +11,4 @@
 - DSDT and SSDTs decompiled and inspected.
 - Duplicate namespace-relevant USB helper and topology patterns documented.
 - Secure Boot prevented unsigned CHIPSEC kernel module loading, limiting deeper ring-0 validation but not ACPI namespace analysis.
+- 2026-03-11; vendor-focused troubleshooting snapshot recorded: duplicate XSDT entries for an SSDT (double-loaded AML), runtime `_DSM` idempotency failure (`USRG` buffer field), and AER correlation on PEG1 root port.
