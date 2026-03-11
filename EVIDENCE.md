@@ -1,5 +1,6 @@
 ## Evidence summary (raw artifacts removed)
 
+- XSDT enumerated the same SSDT twice (e.g., pointers at `0x75835000` and `0x75831000`, size `0x0039DA`), implying duplicate AML loading.
 - Prior disassembly identified serialized helper methods `GPLD` and `GUPC` at root scope, invoked by XHCI RHUB USB devices.
 - The RHUB topology included devices `HS01`–`HS14` and `SS01`–`SS10`, each returning `_UPC` and `_PLD` data constructed via the helper methods.
 - Boot-time interpreter output (now redacted) reported `AE_ALREADY_EXISTS` while creating those helper methods and the per-port `_UPC/_PLD` objects, indicating duplicate definitions across the DSDT/SSDT set.
@@ -10,6 +11,7 @@
 - `AE_ALREADY_EXISTS` for `\GPLD` and `\GUPC` during ACPI table load.
 - `AE_ALREADY_EXISTS` for `_UPC` and `_PLD` under multiple RHUB port paths.
 - `CreateBufferField` collision for `USRG` inside `_DSM`, followed by method abort.
+- AER noise on root port `0000:00:01.0` (hosting GPU `0000:01:00.0`, IRQ 121) coincided with `_DSM` aborts, aligning with firmware-controlled GPU state not being applied.
 
 ## Redaction notice
 
