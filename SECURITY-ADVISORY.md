@@ -54,4 +54,5 @@ Enable Secure Boot and firmware protection mechanisms.
 
 ## References
 https://github.com/cyberiancherubim/acpi-bughunt
+
 https://en.wikipedia.org/wiki/ACPI
