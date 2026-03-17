@@ -15,7 +15,7 @@
 
 ## Redaction notice
 
-All underlying ACPI dumps, kernel logs, and disassembly outputs have been removed to prevent leakage of host identifiers, MSDM data, serials, or HWIDs. The above bullets describe the retained conclusions without exposing raw artefacts.
+All underlying ACPI dumps, kernel logs, and disassembly outputs have been removed to prevent leakage of host identifiers, MSDM data, serials, or HWIDs. The above bullets describe the retained conclusions without exposing raw artifacts.
 
 ## Validation limitations
 
