@@ -2,16 +2,25 @@
 
 This repository provides a privacy-safe summary of ACPI namespace collisions observed on a Lenovo platform. All system-identifying artifacts (hostnames, UUIDs, MSDM table contents, kernel logs, raw ACPI tables, screenshots) have been removed.
 
+## Bug vs CVE Determination
+
+**This is a FIRMWARE BUG, not a CVE-worthy security vulnerability.**
+
+See `ANALYSIS.md` and `BUG-ASSESSMENT.md` for detailed reasoning.
+
 ## What remains
-- `ADVISORY.md` – concise statement of the defect and its impact.
-- `EVIDENCE.md` – summarized observations from prior disassembly and logs (no raw dumps).
-- `GHSA-DRAFT.md` – sanitized GitHub Security Advisory draft.
-- `TIMELINE.md` – disclosure and analysis milestones.
-- `LIMITATIONS.md` – scope boundaries and caveats.
-- `REPORT.md` – structured technical report in third-person narrative, now with a redacted vendor troubleshooting snapshot.
+- `ANALYSIS.md` – **comprehensive bug vs CVE analysis and conclusion**
+- `BUG-ASSESSMENT.md` – **corrected assessment replacing incorrect SECURITY-ADVISORY.md**
+- `ADVISORY.md` – concise statement of the defect and its impact
+- `EVIDENCE.md` – summarized observations from prior disassembly and logs (no raw dumps)
+- `REPORT.md` – structured technical report in third-person narrative, now with a redacted vendor troubleshooting snapshot
+- `GHSA-DRAFT.md` – sanitized GitHub Security Advisory draft (use only if vendor confirms security impact)
+- `TIMELINE.md` – disclosure and analysis milestones
+- `LIMITATIONS.md` – scope boundaries and caveats
+- ~~`SECURITY-ADVISORY.md`~~ – **INCORRECT: contains false security claims; disregard this file**
 
 ## Key finding
-Firmware-level duplication of ACPI namespace objects (e.g., `\GPLD`, `\GUPC`, USB RHUB `_UPC/_PLD`, and a GPU `_DSM` field) triggers `AE_ALREADY_EXISTS` errors during OS boot. The evidence points to a correctness and reliability defect; no exploit primitive has been demonstrated.
+Firmware-level duplication of ACPI namespace objects (e.g., `\GPLD`, `\GUPC`, USB RHUB `_UPC/_PLD`, and a GPU `_DSM` field) triggers `AE_ALREADY_EXISTS` errors during OS boot. The evidence points to a **correctness and reliability defect (bug)**; no exploit primitive has been demonstrated and no security impact exists.
 
 ## Privacy and redaction notes
 - Raw dumps, hardware inventories, and verbose boot logs have been purged to avoid leaking serials, product keys, hostnames, or HWIDs.
