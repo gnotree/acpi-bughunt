@@ -58,7 +58,7 @@ All logs and analysis steps (including PCI IDs, register dumps, and proof-of-con
 
 **Limit Privileges:** Restrict local user accounts to the minimum necessary privileges. Only trusted administrators should have OS-level write access or debugging interfaces. 
 
-**Enable Secure Measures:** Turn on UEFI Secure Boot and ensure kernel lockdown is enforced. On supported Intel platforms, enable SMM write-protection (e.g. set SMM_BWP=1 and BIOS Lock Enable) so the BIOSSEL and BIOSWE bits become immutable after initialization[[7]](#ref-7). 
+**Enable Secure Measures:** Turn on UEFI Secure Boot and ensure kernel lockdown is enforced. On supported Intel platforms, enable SMM write-protection (e.g. set SMM_BWP=1 and BIOS Lock Enable) so the BLE and BIOSWE bits become immutable after initialization[[7]](#ref-7). 
 
 **Monitor ACPI/Flash:** Use firmware validation tools (checksums/signatures) to detect unauthorized changes to ACPI tables or flash regions. 
 
